@@ -5,7 +5,7 @@ export function Home(){
   const [data, setData] = useState([]);
   const navigate = useNavigate()
   useEffect(() =>{
-   axios.get('http://localhost:3000/users')
+   axios.get('https://datajson-wuf7.onrender.com/users')
    .then(res =>setData(res.data))
    .catch(err => console.log(err))
   }, [])
@@ -13,7 +13,7 @@ export function Home(){
   const handleDelete = (id) =>{
     const confirm = window.confirm("Would you like to Delete ? ");
     if(confirm){
-      axios.delete('http://localhost:3000/users/' + id)
+      axios.delete('https://datajson-wuf7.onrender.com/users/' + id)
       .then(res =>{
         location.reload();
       })

@@ -12,14 +12,14 @@ export function Update(){
      })
 
     useEffect(() =>{
-        axios.get('http://localhost:3000/users/' + id)
+        axios.get('https://datajson-wuf7.onrender.com/users/' + id)
         .then(res =>setValues(res.data))
         .catch(err => console.log(err))
        }, [])
 
      const handleUpdate = (event) =>{
       event.preventDefault();
-      axios.put('http://localhost:3000/users/' + id, values)
+      axios.put('https://datajson-wuf7.onrender.com/users/' + id, values)
       .then(res =>{
         setValues(res.data)
         navigate("/")

@@ -7,7 +7,7 @@ export function Read(){
   const [data, setData] = useState([]);
   const {id} = useParams();
     useEffect(() =>{
-        axios.get('http://localhost:3000/users/' + id)
+        axios.get('https://datajson-wuf7.onrender.com/users/' + id)
         .then(res =>setData(res.data))
         .catch(err => console.log(err))
        }, [])
