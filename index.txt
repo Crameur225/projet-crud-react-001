@@ -1,0 +1,5 @@
+React CRUD Operation setp-by-step
+
+1: create your react app
+2: install these packages
+  npm i react-router-dom axios bootstrap json-server;
